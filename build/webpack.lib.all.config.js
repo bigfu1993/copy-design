@@ -11,7 +11,7 @@ module.exports = merge(BasicConfig, {
   },
   output: {
     path: path.resolve(__dirname, "../lib"),
-    filename: "[name].[hash:8].min.js",
+    filename: "[name].js",
     publicPath: "/",
     library: "copy-ui",
     libraryTarget: "umd",

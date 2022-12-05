@@ -1,8 +1,8 @@
 {
-  "name": "copy-ui",
+  "name": "copy-design",
   "version": "1.0.0",
   "description": "a terrible ui want better",
-  "main": "index.js",
+  "main": "lib/copy-design.js",
   "scripts": {
     "dev": "webpack server --config ./build/webpack.dev.config.js",
     "lib": "npm run lib:all && npm run lib:component",

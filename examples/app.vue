@@ -1,7 +1,8 @@
 <template>
   <div>
-    root
+    this is root page
     <router-view></router-view>
+    <c-button>abc</c-button>
   </div>
 </template>
 
@@ -11,5 +12,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
+
 </style>

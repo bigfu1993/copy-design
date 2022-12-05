@@ -1,4 +1,4 @@
-const Path = require("path");
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // html模板
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 提取css文件
 const { VueLoaderPlugin } = require("vue-loader");
@@ -6,18 +6,18 @@ const webpack = require("webpack");
 module.exports = {
   mode: "development",
   devtool: "inline-source-map",
-  entry: Path.resolve(__dirname, "../examples/index.js"), // 入口
+  entry: path.resolve(__dirname, "../examples/index.js"), // 入口
   output: {
     publicPath: "/",
-    path: Path.resolve(__dirname, "../dist"), // 输出入口
+    path: path.resolve(__dirname, "../dist"), // 输出入口
     filename: "[name].[hash:8].min.js",
     chunkFilename: "[name].[hash:8].bundle.js",
   },
   resolve: {
     extensions: [".js", ".vue", ".json", ".html", ".css", ".less"],
     alias: {
+      "@": path.resolve(__dirname, "../examples/src"),
       vue: "vue/dist/vue.esm-bundler.js",
-      "@": Path.resolve(__dirname, "../examples/src"),
       // "#": resolve("src/resource"),
     },
   },
@@ -43,16 +43,16 @@ module.exports = {
           { loader: "css-loader" },
           {
             loader: "less-loader",
-            options: {
-              lessOptions: {
-                // // If you are using less-loader@5 please spread the lessOptions to options directly
-                // modifyVars: {
-                //   "primary-color": "#005982",
-                //   "border-radius-base": "3px",
-                // },
-                // javascriptEnabled: true,
-              },
-            },
+            // options: {
+            //   lessOptions: {
+            // // If you are using less-loader@5 please spread the lessOptions to options directly
+            // modifyVars: {
+            //   "primary-color": "#005982",
+            //   "border-radius-base": "3px",
+            // },
+            // javascriptEnabled: true,
+            // },
+            // },
           },
         ],
       },
@@ -63,7 +63,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: "Development",
-      template: Path.resolve(__dirname, "../examples/template/index.html"),
+      template: path.resolve(__dirname, "../examples/template/index.html"),
     }),
     new webpack.DefinePlugin({
       __VUE_OPTIONS_API__: true,

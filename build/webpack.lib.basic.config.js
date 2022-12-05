@@ -3,26 +3,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 module.exports = {
   // 我们打包组件库时不需要把Vue打包进去
-  externals: {
-    vue: {
-      root: "Vue",
-      commonjs: "vue",
-      commonjs2: "vue",
-      amd: "vue",
-    },
-    router: {
-      root: "vue-router",
-      commonjs: "vue-router",
-      commonjs2: "vue-router",
-      amd: "vue-router",
-    },
-    axios: {
-      root: "axios",
-      commonjs: "axios",
-      commonjs2: "axios",
-      amd: "axios",
-    },
-  },
+  externals: ["vue", "vue-router", "axios"],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "../examples"),

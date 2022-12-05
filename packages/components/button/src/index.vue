@@ -1,6 +1,8 @@
 <template>
   <div>
-    button <slot></slot>
+    <slot name="l"></slot>
+    is button <slot name="default"></slot>
+    <slot name="r"></slot>
   </div>
 </template>
 
@@ -10,6 +12,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 
 </style>

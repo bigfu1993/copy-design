@@ -7,13 +7,13 @@ module.exports = merge(BasicConfig, {
   mode: "production",
   devtool: "source-map",
   entry: {
-    "copy-ui": path.resolve(__dirname, "../packages/index.js"),
+    "copy-design": path.resolve(__dirname, "../packages/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "../lib"),
     filename: "[name].js",
     publicPath: "/",
-    library: "copy-ui",
+    library: "copy-design",
     libraryTarget: "umd",
     libraryExport: "default",
     umdNamedDefine: true,

@@ -18,8 +18,7 @@ module.exports = merge(BasicConfig, {
   },
   output: {
     // 打包过后的文件的输出的路径
-    path: path.resolve(__dirname, "../lib/packages"),
-    // 打包后生成的js文件
+    path: path.resolve(__dirname, "../lib/packages"), // 打包后生成的js文件
     // 解释下这个[name]是怎么来的，它是根据你的entry命名来的，入口叫啥，出口的[name]就叫啥
     filename: "[name]/index.js",
     publicPath: "/", // 我这儿目前还没有资源引用
@@ -52,7 +51,7 @@ module.exports = merge(BasicConfig, {
   plugins: [
     // 新建miniCssExtractPlugin实例并配置
     new miniCssExtractPlugin({
-      filename: "[name]/style.css",
+      filename: "[name]/style/index.css",
     }),
     // 压缩css
     // new optimizeCssnanoPlugin({

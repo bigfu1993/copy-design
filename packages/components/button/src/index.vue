@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="btn">
     <slot name="l"></slot>
     is button <slot name="default"></slot>
     <slot name="r"></slot>
@@ -13,5 +13,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
+.btn {
+  color: #ff0000;
+}
 </style>

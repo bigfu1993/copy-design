@@ -15,10 +15,12 @@ const router = createRouter({
       path: "/",
       redirect: "/button",
       component: () => import("./layout/index.vue"),
-      children: {
-        path: "button",
-        component: () => import("./src/button/index.vue"),
-      },
+      children: [
+        {
+          path: "button",
+          component: () => import("./src/button/index.vue"),
+        },
+      ],
     },
   ],
 });

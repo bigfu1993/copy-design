@@ -1,4 +1,4 @@
-import Icon from "./src/index";
+import Icon from "./src";
 Icon.install = (app) => {
   app.component(Icon.name, Icon);
 };

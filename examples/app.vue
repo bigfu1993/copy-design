@@ -2,7 +2,6 @@
   <div>
     this is root page
     <router-view></router-view>
-    <c-button>abc</c-button>
   </div>
 </template>
 

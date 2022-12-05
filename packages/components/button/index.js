@@ -1,4 +1,4 @@
-import Button from "./src/index";
+import Button from "./src";
 Button.install = (app) => {
   app.component(Button.name, Button);
 };

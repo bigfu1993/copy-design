@@ -8,10 +8,7 @@
     "lib": "npm run lib:all && npm run lib:component",
     "lib:all": "webpack --config ./build/webpack.lib.all.config.js",
     "lib:component": "webpack --config ./build/webpack.lib.component.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build1": "npm run lib:all1 && npm run lib:component1",
-    "lib:all1": "webpack --config ./build/rui/webpack.lib.prod.js",
-    "lib:component1": "webpack --config ./build/rui/webpack.lib.prod.component.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

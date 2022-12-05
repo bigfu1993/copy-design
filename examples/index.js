@@ -6,6 +6,7 @@ import App from "./app.vue";
 const vm = createApp(App);
 
 import CD from "copy-design";
+import "copy-design/lib/copy-design.css";
 vm.use(CD);
 
 const router = createRouter({

@@ -14,6 +14,8 @@ module.exports = {
   resolve: {
     alias: {
       vue$: "vue/dist/vue.cjs.prod.js",
+      // vue: "vue/lib/vue.cjs.prod.js",
+      // vue$: "vue/dist/vue.cjs.prod.js",
       "@": path.resolve(__dirname, "../examples"),
       UI: path.resolve(__dirname, "../packages/components"),
     },

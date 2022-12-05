@@ -14,6 +14,6 @@ export default {
 
 <style lang="less" scoped>
 .btn {
-  color: #ff0000;
+  color: #0000ff;
 }
 </style>

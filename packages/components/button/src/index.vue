@@ -6,9 +6,10 @@
 
 <script>
 export default {
-  name: "button",
+  name: "c-button",
 };
 </script>
 
 <style lang="scss" scoped>
+
 </style>

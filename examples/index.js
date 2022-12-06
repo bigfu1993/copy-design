@@ -5,8 +5,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import App from "./app.vue";
 const vm = createApp(App);
 
-import CD from "copy-design";
-import "copy-design/lib/copy-design.css";
+import CD from "#/index";
+// import "copy-design/lib/copy-design.css";
 vm.use(CD);
 
 const router = createRouter({
@@ -20,6 +20,10 @@ const router = createRouter({
         {
           path: "button",
           component: () => import("./src/button/index.vue"),
+        },
+        {
+          path: "icon",
+          component: () => import("./src/icon/index.vue"),
         },
       ],
     },

@@ -8,7 +8,7 @@
 import "../../../assets/font/iconfont.js";
 
 export default {
-  name: "r-icon",
+  name: "c-icon",
   props: {
     name: {
       type: String,

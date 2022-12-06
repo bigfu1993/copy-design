@@ -18,8 +18,8 @@ module.exports = {
     extensions: [".js", ".vue", ".json", ".html", ".css", ".less"],
     alias: {
       "@": path.resolve(__dirname, "../examples/src"),
+      "#": path.resolve(__dirname, "../packages/"),
       vue: "vue/dist/vue.esm-bundler.js",
-      // "#": resolve("src/resource"),
     },
   },
   module: {

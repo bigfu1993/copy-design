@@ -2,8 +2,8 @@
 
 // import "animate.css";
 import "./assets/style/common/reset.less";
-import Button from "UI/button";
-import Icon from "UI/icon";
+import Button from "./components/button";
+import Icon from "./components/icon";
 
 // 定义组件列表
 const componentsList = [Button, Icon];

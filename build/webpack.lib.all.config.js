@@ -13,10 +13,16 @@ module.exports = merge(BasicConfig, {
     path: path.resolve(__dirname, "../lib"),
     filename: "[name].js",
     publicPath: "/",
-    library: "copy-design",
-    libraryTarget: "umd",
-    libraryExport: "default",
-    umdNamedDefine: true,
+    // library: "copy-design",
+    library: {
+      name: "copy-design",
+      type: "umd",
+      export: "default",
+      umdNamedDefine: true,
+    },
+    // libraryTarget: "umd",
+    // libraryExport: "default",
+    // umdNamedDefine: true,
   },
   module: {
     rules: [

@@ -3,19 +3,15 @@ const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 module.exports = {
   // 我们打包组件库时不需要把Vue打包进去
-  externals: {
-    vue: {
-      root: "vue",
-      commonjs: "vue",
-      commonjs2: "vue",
-      amd: "vue",
-    },
-  },
+  externals: "vue",
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.cjs.prod.js",
-      // vue: "vue/lib/vue.cjs.prod.js",
+      vue$: "vue/dist/vue.runtime.esm.js",
+      // vue$: "vue/dist/vue.cjs.js",
       // vue$: "vue/dist/vue.cjs.prod.js",
+      // vue$: "vue/dist/vue.esm-browser.js",
+      // vue$: "vue/dist/vue.runtime.esm-browser.js",
+      vue: "vue/dist/vue.cjs.prod.js",
       "@": path.resolve(__dirname, "../examples"),
       UI: path.resolve(__dirname, "../packages/components"),
     },

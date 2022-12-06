@@ -13,6 +13,7 @@ module.exports = {
     filename: "[name].[hash:8].min.js",
     chunkFilename: "[name].[hash:8].bundle.js",
   },
+  externals: {},
   resolve: {
     extensions: [".js", ".vue", ".json", ".html", ".css", ".less"],
     alias: {

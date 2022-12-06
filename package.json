@@ -1,7 +1,7 @@
 {
   "name": "copy-design",
   "version": "1.0.0",
-  "description": "a terrible ui want better",
+  "description": "a terrible ui",
   "main": "lib/copy-design.js",
   "scripts": {
     "dev": "webpack server --config ./build/webpack.dev.config.js",

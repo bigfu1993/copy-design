@@ -1,5 +1,6 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
+const copyWebpackPlugin = require("copy-webpack-plugin"); // 用于拷贝的插件
 const path = require("path");
 module.exports = {
   // 我们打包组件库时不需要把Vue打包进去
@@ -48,5 +49,16 @@ module.exports = {
       },
     ],
   },
-  plugins: [new CleanWebpackPlugin(), new VueLoaderPlugin()],
+  plugins: [
+    new copyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "../packages/copy-design.d.ts"),
+          to: path.resolve(__dirname, "../lib"),
+        },
+      ],
+    }),
+    new CleanWebpackPlugin(),
+    new VueLoaderPlugin(),
+  ],
 };

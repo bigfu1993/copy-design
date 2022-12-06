@@ -5,7 +5,6 @@ const fs = require("fs");
 const { merge } = require("webpack-merge");
 const miniCssExtractPlugin = require("mini-css-extract-plugin"); // 分离css插件
 // const optimizeCssnanoPlugin = require("@intervolga/optimize-cssnano-plugin");
-// const copyWebpackPlugin = require("copy-webpack-plugin"); // 用于拷贝的插件
 
 const BasicConfig = require("./webpack.lib.basic.config.js"); // 打包基础配置
 const componentsEntry = require("../packages/entries.js"); // 引入入口配置文件

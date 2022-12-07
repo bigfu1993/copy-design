@@ -1,10 +1,10 @@
 .c-button {
 	cursor: pointer;
 	background: #fff;
-	border-radius: @btn-radius;
-	color: @theme;
-	border: 1px solid @theme;
-	transition: all @btn-transition;
+	border-radius: var(--button-radius);
+	color: var(--theme);
+	border: 1px solid var(--theme);
+	transition: all var(----transition);
 
 	&.c-button+.c-button {
 		margin-left: 0.6rem;
@@ -12,8 +12,8 @@
 
 	&.btn-ghost {
 		background: transparent;
-		color: @theme;
-		border: 1px solid @theme;
+		color: var(--theme);
+		border: 1px solid var(--theme);
 	}
 
 	&.size-mini {
@@ -58,13 +58,13 @@
 
 
 	&.btn-primary {
-		background: @theme;
-		border: 1px solid @theme;
+		background: var(--theme);
+		border: 1px solid var(--theme);
 		color: #fff;
 
 		&:hover {
-			background: @theme-light;
-			border: 1px solid @theme-light;
+			background: var(--theme_light);
+			border: 1px solid var(--theme_light);
 		}
 	}
 }

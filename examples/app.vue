@@ -8,6 +8,9 @@
 <script>
 export default {
   name: "root",
+  mounted: () => {
+    // document.querySelector(':root').style.setProperty('--theme', '#ff0000')
+  }
 };
 </script>
 

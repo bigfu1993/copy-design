@@ -5,8 +5,10 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import App from "./app.vue";
 const vm = createApp(App);
 
+import "#/assets/style/index.less";
+
 import CD from "#/index";
-// import "copy-design/lib/copy-design.css";
+import "copy-design/lib/copy-design.css";
 vm.use(CD);
 
 const router = createRouter({
@@ -19,11 +21,11 @@ const router = createRouter({
       children: [
         {
           path: "button",
-          component: () => import("./src/button/index.vue"),
+          component: () => import("./views/button/index.vue"),
         },
         {
           path: "icon",
-          component: () => import("./src/icon/index.vue"),
+          component: () => import("./views/icon/index.vue"),
         },
       ],
     },

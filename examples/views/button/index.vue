@@ -1,6 +1,8 @@
 <template>
-    <div>
+    <div class="flex">
         <c-button>abc</c-button>
+        <c-button primary>primary</c-button>
+        <c-button size="mini">primary</c-button>
     </div>
 </template>
 
@@ -12,6 +14,6 @@ export default {
 
 <style lang="less" scoped>
 div {
-    border: 1px solid #ddd;
+    // border: 1px solid #ddd;
 }
 </style>

@@ -14,6 +14,7 @@ module.exports = {
       // vue$: "vue/dist/vue.runtime.esm-browser.js",
       vue: "vue/dist/vue.cjs.prod.js",
       "@": path.resolve(__dirname, "../examples"),
+      "#": path.resolve(__dirname, "../packages/"),
       UI: path.resolve(__dirname, "../packages/components"),
     },
     extensions: ["*", ".js", ".vue", ".json"],

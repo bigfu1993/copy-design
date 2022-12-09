@@ -61,6 +61,5 @@ let cornerStyle = computed(() => {
 })
 </script>
 <style lang="less">
-@import '~#/assets/style/theme.less';
 @import './css/index.less';
 </style>

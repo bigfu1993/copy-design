@@ -1,4 +1,4 @@
-# happy-package
+# copy-design
 
 ## Project setup
 ### example示例
@@ -16,9 +16,9 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 const vm = createApp(App);
-import CD from "copy-design";
+import CopyDesign from "copy-design";
 import "copy-design/lib/copy-design.css";
-vm.use(CD); 
+vm.use(CopyDesign); 
 
 ```
 ### 目录结构
@@ -61,11 +61,8 @@ vm.use(CD);
 |- packages.json
 |- README.md  # 说明文档  
 
-```
- <!-- ```
-import HappyPackage from 'happy-package'
-vue.use(HappyPackage)
- ``` -->
+``` 
+
 ```
 
 ```

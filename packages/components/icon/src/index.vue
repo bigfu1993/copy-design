@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import "../../../assets/font/iconfont.js";
+import "../../../assets/font/iconfont/iconfont.js";
 
 export default {
   name: "c-icon",

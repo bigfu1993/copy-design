@@ -6,9 +6,9 @@ import App from "./app.vue";
 const vm = createApp(App);
 
 import "#/assets/style/index.less";
-
+// import CD from "copy-design";
 import CD from "#/index";
-import "copy-design/lib/copy-design.css";
+// import "copy-design/lib/copy-design.css";
 vm.use(CD);
 
 const router = createRouter({
@@ -27,6 +27,10 @@ const router = createRouter({
           path: "icon",
           component: () => import("./views/icon/index.vue"),
         },
+        {
+          path: "menu",
+          component: () => import("./views/menu/index.vue")
+        }
       ],
     },
   ],

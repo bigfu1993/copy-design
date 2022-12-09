@@ -2,6 +2,9 @@
 const fs = require("fs");
 const path = require("path");
 
+import "./assets/style/index.less";
+import "./assets/font/index.less";
+
 function componentsEntry() {
   let entries = {};
   let files = fs.readdirSync(path.resolve(__dirname, "./components/"));

@@ -57,6 +57,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|jpeg|svg|gif|mp3|mp4|wav)/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 5 * 1024, // 8kb
+          },
+        },
+      },
     ],
   },
   plugins: [

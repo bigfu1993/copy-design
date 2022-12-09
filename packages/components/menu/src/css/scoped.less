@@ -1,0 +1,128 @@
+.c-menu-wrap {
+	position: relative;
+	height: 80px;
+	padding: 0 20px;
+	background: var(--theme-background);
+	color: var(--color-2);
+	width: 100%;
+	min-width: 1280px;
+	z-index: 1000;
+
+	// 菜单栏动画
+	.header-video-wrapper {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		z-index: 0;
+
+		.header-video {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+		}
+	}
+
+	// 项目简介
+	.logo-wrap {
+		z-index: 1;
+
+		.logo-title {
+			color: var(--fff);
+			font-weight: 700;
+			font-size: 22px;
+			letter-spacing: 3px;
+			font-family: FZChaoCuHei-M10S, sans-serif;
+		}
+	}
+
+	// 导航
+	.menu-wrap {
+		margin: 0 30px;
+		z-index: 1;
+
+		.menu-item {
+			cursor: pointer;
+			font-weight: 700;
+			height: 100%;
+			position: relative;
+			padding: 0 20px;
+			letter-spacing: 1.5px;
+			transition: all .3s;
+
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 4px;
+				left: 50%;
+				transform: translate(-50%);
+				width: calc(100% - 30px);
+				height: 5px;
+				background-color: var(--header-text__hover);
+				opacity: 0;
+				transition: all .3s;
+			}
+
+			&:hover {
+				background: var(--header-theme__hover);
+
+				&:after {
+					opacity: 1;
+				}
+
+				.menu {
+					color: var(--color-1);
+				}
+
+				.children {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+
+			.menu {
+				transition: all .3s;
+			}
+
+
+			.children {
+				opacity: 0;
+				pointer-events: none;
+				min-width: 100%;
+				background: var(--header-theme);
+				position: absolute;
+				left: 50%;
+				top: 100%;
+				transform: translate(-50%, 0);
+				padding: 10px 0;
+				transition: all 0.3s;
+				border-radius: 3px;
+
+				.children-item {
+					padding: 6px 16px;
+					letter-spacing: 1.5px;
+					color: var(--color-1);
+
+
+					&:hover {
+						background-color: var(--header-text__hover);
+					}
+				}
+			}
+		}
+	}
+
+	.extend-wrap {
+		color: var(--fff);
+		z-index: 1;
+
+		.divider {
+			display: block;
+			margin: 0;
+			background-color: var(--border-color);
+		}
+	}
+}

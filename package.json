@@ -33,11 +33,16 @@
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.20.2",
     "@babel/runtime": "^7.20.6",
+    "@types/wavesurfer.js": "^6.0.3",
     "@vue/compiler-sfc": "^3.2.45",
+    "ant-design-vue": "^3.2.15",
+    "axios": "^1.2.1",
     "babel-loader": "^9.1.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
+    "echarts": "^5.4.1",
+    "echarts-liquidfill": "^3.1.0",
     "fs": "^0.0.1-security",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.3",
@@ -46,6 +51,8 @@
     "path": "^0.12.7",
     "postcss-loader": "^7.0.2",
     "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
     "vue": "^3.2.36",
     "vue-loader": "^17.0.1",
     "vue-router": "^4.1.6",
@@ -53,5 +60,9 @@
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "gm-crypto": "^0.1.8",
+    "wavesurfer.js": "^6.4.0"
   }
 }

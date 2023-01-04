@@ -1,0 +1,109 @@
+.c-tooltip {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: var(--fff);
+  font-size: 14px;
+  line-height: 14px;
+  white-space: nowrap;
+  padding: 6px 8px;
+  border-radius: var(--radius-1);
+  filter: drop-shadow(0 0 6px var(--shadow-color));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  &.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+  }
+
+  &[class*="top"] {
+    &:before {
+      transform: translate(-50%);
+      top: 100%;
+      width: 10px;
+      height: 5px;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+    }
+
+    &.topLeft:before {
+      transform: translate(50%);
+      right: max(20%, 8px);
+    }
+    &.top:before {
+      left: 50%;
+    }
+    &.topRight:before {
+      left: max(20%, 8px);
+    }
+  }
+
+  &[class*="left"] {
+    &:before {
+      transform: translateY(-50%);
+      left: 100%;
+      width: 5px;
+      height: 10px;
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+    }
+
+    &.leftTop:before {
+      transform: translateY(50%);
+      bottom: max(20%, 8px);
+    }
+    &.left:before {
+      top: 50%;
+    }
+    &.leftBottom:before {
+      top: max(20%, 8px);
+    }
+  }
+
+  &[class*="right"] {
+    &:before {
+      transform: translateY(-50%);
+      left: -4.5px;
+      width: 5px;
+      height: 10px;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    &.rightTop:before {
+      transform: translateY(50%);
+      bottom: max(20%, 8px);
+    }
+    &.right:before {
+      top: 50%;
+    }
+    &.rightBottom:before {
+      top: max(20%, 8px);
+    }
+  }
+
+  &[class*="bottom"] {
+    &:before {
+      transform: translate(-50%);
+      top: -4.5px;
+      width: 10px;
+      height: 5px;
+      clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    }
+
+    &.bottomLeft:before {
+      transform: translate(50%);
+      right: max(20%, 8px);
+    }
+    &.bottom:before {
+      left: 50%;
+    }
+    &.bottomRight:before {
+      left: max(20%, 8px);
+    }
+  }
+}

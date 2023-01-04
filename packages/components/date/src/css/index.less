@@ -1,0 +1,120 @@
+.ant-picker-dropdown {
+    .ant-picker-panel-container {
+      background-color: #10355e;
+      .ant-picker-panel {
+        .ant-picker-header {
+          .ant-picker-header-super-prev-btn,
+          .ant-picker-header-prev-btn,
+          .ant-picker-header-next-btn,
+          .ant-picker-header-super-next-btn,
+          .ant-picker-header-view {
+            color: #fff;
+          }
+        }
+        .ant-picker-content {
+          > thead {
+            > tr {
+              > th {
+                color: #3ec3f7;
+              }
+            }
+          }
+          > tbody {
+            > tr {
+              > td {
+                &.ant-picker-cell {
+                  color: rgba(255, 255, 255, 0.3);
+                  &.ant-picker-cell-in-view {
+                    color: #e3ecff;
+                  }
+                  &.ant-picker-cell-selected,
+                  &.ant-picker-cell-range-start,
+                  &.ant-picker-cell-range-end {
+                    .ant-picker-cell-inner {
+                      background-color: #3ec3f7;
+                    }
+                  }
+                  &.ant-picker-cell-today {
+                    .ant-picker-cell-inner {
+                      &::before {
+                        border-color: #3ec3f7;
+                      }
+                    }
+                  }
+                  &:hover {
+                    &::before,
+                    .ant-picker-cell-inner {
+                      background: transparent !important;
+                    }
+                  }
+                }
+                &.ant-picker-cell-in-range,
+                &.ant-picker-cell-selected {
+                  &::before {
+                    background: transparent;
+                  }
+                }
+              }
+            }
+            .ant-picker-week-panel-row-selected {
+              > td {
+                background-color: #3ec3f7 !important;
+              }
+            }
+          }
+          .ant-picker-time-panel-cell {
+            &:hover {
+              .ant-picker-time-panel-cell-inner {
+                background-color: transparent !important;
+              }
+            }
+          }
+          .ant-picker-time-panel-column {
+            &::-webkit-scrollbar-track {
+              background-color: var(--track) !important;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: #3ec3f7 !important;
+            }
+            .ant-picker-time-panel-cell {
+              .ant-picker-time-panel-cell-inner {
+                color: #e3ecff;
+              }
+              &.ant-picker-time-panel-cell-selected {
+                .ant-picker-time-panel-cell-inner {
+                  background-color: #3ec3f7;
+                }
+              }
+            }
+          }
+          .ant-picker-week-panel-row {
+            &:hover {
+              .ant-picker-cell {
+                background-color: transparent !important;
+              }
+            }
+          }
+        }
+        .ant-picker-footer {
+          .ant-picker-ranges {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          color: #3ec3f7;
+          .ant-picker-now-btn,
+          .ant-btn-sm {
+            display: block;
+            height: 26px;
+            font-size: 14px;
+            line-height: 26px;
+            padding: 0 10px;
+            background: #0b2542;
+            border: 1px solid #323f58;
+            border-radius: 13px;
+            color: #3ec3f7;
+          }
+        }
+      }
+    }
+  }

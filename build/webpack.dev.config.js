@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin"); // html模板
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 提取css文件
+const copyWebpackPlugin = require("copy-webpack-plugin"); // 用于拷贝的插件
 const { VueLoaderPlugin } = require("vue-loader");
 const webpack = require("webpack");
 module.exports = {
@@ -13,17 +14,41 @@ module.exports = {
     filename: "[name].[hash:8].min.js",
     chunkFilename: "[name].[hash:8].bundle.js",
   },
-  externals: {},
+  // externals: ["axios"],
   resolve: {
-    extensions: [".js", ".vue", ".json", ".html", ".css", ".less"],
+    extensions: [
+      ".ts",
+      ".tsx",
+      ".js",
+      ".vue",
+      ".json",
+      ".html",
+      ".css",
+      ".less",
+    ],
+    extensionAlias: {
+      ".js": [".js", ".ts"],
+      ".cjs": [".cjs", ".cts"],
+      ".mjs": [".mjs", ".mts"],
+    },
     alias: {
       "@": path.resolve(__dirname, "../examples/views"),
       "#": path.resolve(__dirname, "../packages/"),
       vue: "vue/dist/vue.esm-bundler.js",
+      axios: path.resolve(__dirname, "../node_modules/axios/lib/axios.js"),
     },
   },
   module: {
     rules: [
+      {
+        test: /\.([cm]?ts|tsx)$/,
+        exclude: /node_modules/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+          transpileOnly: true, // 只做编译检查不做运行检查
+        },
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -84,10 +109,18 @@ module.exports = {
       //   HOST: JSON.stringify(process.env.HOST),
       // },
     }),
+    new copyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "../examples/template"),
+          to: path.resolve(__dirname, "../dist/public"),
+        },
+      ],
+    }),
   ],
   devServer: {
-    host: "localhost",
-    port: 1447,
+    host: "0.0.0.0",
+    https: true,
     // open: true,
   },
 };

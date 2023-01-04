@@ -1,34 +1,22 @@
 <template>
-  <svg class="icon" aria-hidden="true" @click="handlerClick">
-    <use :xlink:href="IconName"></use>
+  <svg class="icon" aria-hidden="true">
+    <use :xlink:href="`#icon-${name}`"></use>
   </svg>
 </template>
 
-<script>
-import "../../../assets/font/iconfont/iconfont.js";
-
-export default {
-  name: "c-icon",
-  props: {
-    name: {
-      type: String,
-      default: ""
-    }
-  },
-  computed: {
-    IconName() {
-      return `#icon-${this.name}`;
-    }
-  },
-  methods: {
-    handlerClick() {
-      this.$emit("click");
-    }
-  }
-};
+<script lang="ts">
+export default { name: "c-icon", };
 </script>
-
-<style type="text/css">
+<script setup lang="ts" >
+import "#/assets/font/iconfont/iconfont.js";
+let props = defineProps({
+  name: {
+    type: String,
+    default: ""
+  }
+})
+</script>
+<style lang="less">
 .icon {
   width: 1em;
   height: 1em;

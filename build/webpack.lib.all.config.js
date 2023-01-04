@@ -7,7 +7,7 @@ module.exports = merge(BasicConfig, {
   mode: "production",
   devtool: "source-map",
   entry: {
-    "copy-design": path.resolve(__dirname, "../packages/index.js"),
+    "copy-design": path.resolve(__dirname, "../packages/index.ts"),
   },
   output: {
     path: path.resolve(__dirname, "../lib"),

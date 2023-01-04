@@ -1,10 +1,11 @@
 <template>
   <div
-    :class="`flex-row-center ${design ? 'c-button-design' : 'c-button'}  ${primary ? 'btn-primary' : ''} ${ghost ? 'btn-ghost' : ''} ${type ? type : ''} size-${size}`"
-    :style="`font-weight: ${weight ? '700' : '400'}`">
-    <span>
+    :class="`flex-row-center ${design ? 'c-button-design' : 'c-button'} ${primary ? 'c-button-primary' : ''} ${ghost ? 'c-button-ghost' : ''} ${disabled ? 'c-button-disabled' : ''} ${shape ? `c-button-${shape}` : ''} ${type ? type : ''} size-${size}`"
+    :style="`font-weight: ${weight ? '700' : '400'};border-style:${dashed ? 'dashed' : 'solid'};width:${block ? 'fit-content' : ''}`">
+    <span class="flex-row-center-between">
+      <slot name="icon"></slot>
       <slot name="l"></slot>
-      <slot>按钮</slot>
+      <slot></slot>
       <slot name="r"></slot>
     </span>
     <em :style="`width:${corners[0][0]}px;height:${corners[0][1]}px`" class="corner-border left-top-border"
@@ -19,33 +20,49 @@
 
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "c-button",
 };
 </script>
-<script  setup>
-import { computed } from 'vue'
+<script  lang="ts" setup>
+import { computed, PropType } from 'vue'
 let props = defineProps({
   design: {
     type: Boolean,
     default: false
   },
+  corners: {
+    type: Array as any,
+    default: () => []
+  },
   weight: {
     type: Boolean,
     default: false
   },
-  corners: {
-    type: Array,
-    default: () => []
-  },
   primary: {
+    type: Boolean,
+    default: false
+  },
+  dashed: {
     type: Boolean,
     default: false
   },
   ghost: {
     type: Boolean,
     default: false
+  },
+  block: {
+    type: Boolean,
+    default: false
+  },
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  shape: {
+    type: String,
+    default: ''
   },
   type: {
     type: String,

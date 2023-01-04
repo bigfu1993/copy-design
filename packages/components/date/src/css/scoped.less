@@ -1,0 +1,37 @@
+.c-date-container {
+    :deep(.ant-picker) {
+        background-color: transparent;
+        border: 1px solid #3ec3f7;
+
+        .ant-picker-input {
+            >input {
+                color: #E3ECFF;
+
+                &::placeholder {
+                    color: rgba(227, 236, 255, 0.3);
+                }
+            }
+            .ant-picker-clear {
+                background-color: transparent;
+
+                .anticon-close-circle {
+                    >svg {
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        .ant-picker-suffix {
+            .anticon-calendar {
+                >svg {
+                    color: #8be6ff;;
+                }
+            }
+        }
+        &.ant-picker-range {
+            .ant-picker-active-bar {
+                background: #3ec3f7;
+            }
+        }
+    }
+}

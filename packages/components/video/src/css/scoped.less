@@ -1,0 +1,122 @@
+.c-video-wrapper {
+  width: 100%;
+  height: 100%;
+  .c-video-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      overflow: hidden;
+      .footer {
+        position: absolute;
+        bottom: -32px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 32px;
+        padding: 0 20px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        transition: bottom 0.4s ease;
+        &.show {
+          bottom: 0;
+          z-index: 20;
+        }
+        .actions {
+          .iconfont {
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            &.disabled {
+              cursor: default;
+              color: #9c9c9c;
+            }
+          }
+        }
+        .speed-control-select {
+          background: rgba(0, 0, 0, 0.2);
+          color: white;
+          font-size: 14px;
+          width: 76px;
+          height: 28px;
+          line-height: 28px;
+          padding: 0 8px;
+          cursor: pointer;
+        }
+      }
+      .speed-control-list {
+        position: absolute;
+        right: 20px;
+        bottom: 55px;
+        background: rgba(0, 0, 0, 0.2);
+        color: white;
+        font-size: 14px;
+        width: 76px;
+        padding: 4px 8px;
+        z-index: 20;
+        .control-list-item {
+          line-height: 22px;
+          cursor: pointer;
+          &.active {
+            color: #1784fc;
+          }
+          &:hover {
+            color: #6fb4ff;
+          }
+        }
+      }
+    }
+    .controller-wrap-0 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+      display: grid;
+      grid-template:
+        "lt t rt" 1fr
+        "l c r" 1fr
+        "lb b rb" 1fr
+        / 1fr 1fr 1fr;
+      opacity: 0.4;
+      grid-gap: 8px;
+      z-index: 10;
+      .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        border: 1px solid whitesmoke;
+      }
+    }
+    .controller-wrap-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.4;
+      border: 2px solid white;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: default;
+      z-index: 10;
+    }
+    .drag-rect {
+      position: absolute;
+      z-index: 5;
+    }
+    .bg-transparent-white {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}

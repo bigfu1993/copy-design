@@ -1,5 +1,3 @@
-@import 'theme.less';
-
 .grid {
   display: grid;
   grid-gap: 10px
@@ -263,7 +261,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .flex-column-start-around {
@@ -394,7 +392,7 @@
   transition: all var(--transition);
 
   &:hover {
-    color: var(--theme);
+    color: var(--theme) !important;
   }
 }
 
@@ -403,7 +401,10 @@
 }
 
 .m5 {
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .mt5 {
@@ -423,23 +424,30 @@
 }
 
 .mlr5 {
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .mrl5 {
-  margin: 0 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .mtb5 {
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .mbt5 {
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .m10 {
-  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .mt10 {
@@ -459,23 +467,30 @@
 }
 
 .mlr10 {
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .mrl10 {
-  margin: 0 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .mbt10 {
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .mtb10 {
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .m20 {
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .mt20 {
@@ -495,25 +510,32 @@
 }
 
 .mrl20 {
-  margin: 0 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .mlr20 {
-  margin: 0 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .mtb20 {
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .mbt20 {
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
 .p5 {
-  padding: 5px;
   box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .pt5 {
@@ -537,27 +559,34 @@
 }
 
 .plr5 {
-  padding: 0 5px;
   box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .prl5 {
-  padding: 0 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   box-sizing: border-box;
 }
 
 .pbt5 {
-  padding: 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
   box-sizing: border-box;
 }
 
 .ptb5 {
-  padding: 5px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
   box-sizing: border-box;
 }
 
 .p10 {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
 }
 
@@ -582,28 +611,35 @@
 }
 
 .plr10 {
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
 }
 
 .prl10 {
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
 }
 
 .pbt10 {
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
 }
 
 .ptb10 {
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
 }
 
 
 .p20 {
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -628,22 +664,26 @@
 }
 
 .plr20 {
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
 }
 
 .prl20 {
-  padding: 0 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
 }
 
 .pbt20 {
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
 .ptb20 {
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   box-sizing: border-box;
 }
 
@@ -774,9 +814,12 @@
   font-weight: bold;
 }
 
-::-webkit-scrollbar {
-  height: 6px;
-  width: 6px;
+.unselect {
+  user-select: none;
+}
+
+.over-hidden {
+  overflow: hidden;
 }
 
 .scroll {
@@ -797,6 +840,11 @@
     border-radius: var(--track-radius) !important;
     background: var(--thumb) !important;
   }
+}
+
+::-webkit-scrollbar {
+  height: var(--thumb-size) !important;
+  width: var(--thumb-size) !important;
 }
 
 ::-webkit-scrollbar-track {

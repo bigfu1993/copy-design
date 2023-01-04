@@ -1,0 +1,105 @@
+.c-input-container {
+  position: relative;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  border: 1px solid #3ec3f7;
+}
+.c-input-container .c-input {
+  width: 100%;
+  flex-shrink: 1;
+  border: none;
+  padding: 10px 12px;
+  color: #fff;
+}
+.c-input-container .c-input::placeholder {
+  color: #fff;
+}
+.c-input-container .enter-btn {
+  flex-shrink: 0;
+  width: 30px;
+  border: none;
+  color: #8be6ff;
+}
+.c-input-container .enter-btn > i {
+  display: inline-block;
+  cursor: pointer;
+}
+.c-input-container .enter-btn > i.icon-guanbi {
+  color: #ccc;
+  transform: scale(0.6);
+}
+.c-input-container .c-textarea {
+  display: block;
+  flex: 1;
+  padding: 12px 10px 16px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.c-input-container .c-textarea::placeholder {
+  color: #fff;
+}
+.c-input-container .c-textarea::after {
+  display: none;
+}
+.c-input-container .c-textarea-counter {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  white-space: nowrap;
+  color: #fff;
+}
+.c-input-container .errmsg-line {
+  position: absolute;
+  left: 0;
+  height: 36px;
+  padding: 0 12px;
+}
+.c-input-container.large {
+  font-size: 16px;
+}
+.c-input-container.large .c-input {
+  height: 44px;
+}
+.c-input-container.large .c-textarea {
+  height: 88px;
+}
+.c-input-container.normal {
+  font-size: 14px;
+}
+.c-input-container.normal .c-input {
+  height: 36px;
+}
+.c-input-container.normal .c-textarea {
+  height: 72px;
+}
+.c-input-container.small {
+  font-size: 12px;
+}
+.c-input-container.small .c-input {
+  height: 28px;
+}
+.c-input-container.small .c-textarea {
+  height: 56px;
+}
+.c-input-container.disabled {
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+  color: #ccc;
+}
+.c-input-container.disabled .c-input::placeholder,
+.c-input-container.disabled .c-textarea::placeholder {
+  color: #ccc;
+}
+.c-input-container.disabled .enter-btn {
+  color: #ccc;
+  cursor: not-allowed;
+}
+.c-input-container.disabled .c-textarea-counter {
+  color: #ccc;
+}
+.c-input-container.error {
+  border: 1px solid #FF6363;
+  color: #fff;
+}

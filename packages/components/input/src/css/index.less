@@ -1,0 +1,130 @@
+.c-input-container {
+  position: relative;
+  flex-wrap: nowrap;
+  border-radius: 4px;
+  border: 1px solid #3ec3f7;
+
+  .c-input {
+    width: 100%;
+    flex-shrink: 1;
+    border: none;
+    padding: 10px 12px;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+
+  .enter-btn {
+    flex-shrink: 0;
+    width: 30px;
+    border: none;
+    color: #8be6ff;
+
+    >i {
+      display: inline-block;
+      cursor: pointer;
+      &.icon-guanbi {
+        color: #ccc;
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  .c-textarea {
+    display: block;
+    flex: 1;
+    padding: 12px 10px 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .c-textarea-counter {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  .errmsg-line {
+    position: absolute;
+    left: 0;
+    height: 36px;
+    padding: 0 12px;
+  }
+
+  &.large {
+    font-size: 16px;
+
+    .c-input {
+      height: 44px;
+    }
+
+    .c-textarea {
+      height: 88px;
+    }
+  }
+
+  &.normal {
+    font-size: 14px;
+
+    .c-input {
+      height: 36px;
+    }
+
+    .c-textarea {
+      height: 72px;
+    }
+  }
+
+  &.small {
+    font-size: 12px;
+
+    .c-input {
+      height: 28px;
+    }
+
+    .c-textarea {
+      height: 56px;
+    }
+  }
+
+  &.disabled {
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+    color: #ccc;
+
+    .c-input,
+    .c-textarea {
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+
+    .enter-btn {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .c-textarea-counter {
+      color: #ccc;
+    }
+  }
+
+  &.error {
+    border: 1px solid #FF6363;
+    color: #fff;
+  }
+}
